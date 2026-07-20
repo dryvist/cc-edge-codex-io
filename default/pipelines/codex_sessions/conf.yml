@@ -4,8 +4,12 @@ groups: {}
 asyncFuncTimeout: 1000
 description: >-
   Codex CLI session transcript pipeline. Stamps Splunk-canonical fields
-  (sourcetype, index) on every rollout JSONL event; datatype already
-  arrives from the input's metadata.
+  (sourcetype, index) on every rollout JSONL event, then normalizes the
+  raw event onto OpenTelemetry-AI `llm.*` semantic-convention fields
+  (model, usage, prompt/completion, tool calls) where the source data
+  actually supports the mapping. Raw/source fields are always preserved
+  alongside the added `llm.*` fields; datatype already arrives from the
+  input's metadata.
 functions:
   - id: eval
     filter: "true"
@@ -16,3 +20,87 @@ functions:
           value: "'codex:cli:session'"
         - name: index
           value: "'main'"
+  - id: eval
+    filter: "true"
+    disabled: false
+    conf:
+      add:
+        # llm.model — turn_context carries the active model for the turn.
+        - name: "'llm.model'"
+          value: >-
+            type==='turn_context' ? payload.model : undefined
+        # llm.agent.name — session_meta carries the session id; Codex CLI
+        # sessions are agent-driven (the model chooses its own actions),
+        # not a fixed program-controlled chain, so llm.agent.* fits better
+        # than llm.chain.*.
+        - name: "'llm.agent.name'"
+          value: >-
+            type==='session_meta' ? payload.id : undefined
+        # llm.openai.usage.* — event_msg/token_count carries cumulative and
+        # incremental token counts; last_token_usage is the per-update
+        # delta, the closest analog to a single request/response's usage.
+        - name: "'llm.openai.usage.prompt_tokens'"
+          value: >-
+            (type==='event_msg' && payload.type==='token_count')
+              ? payload.info.last_token_usage.input_tokens
+              : undefined
+        - name: "'llm.openai.usage.completion_tokens'"
+          value: >-
+            (type==='event_msg' && payload.type==='token_count')
+              ? payload.info.last_token_usage.output_tokens
+              : undefined
+        - name: "'llm.openai.usage.total_tokens'"
+          value: >-
+            (type==='event_msg' && payload.type==='token_count')
+              ? payload.info.last_token_usage.total_tokens
+              : undefined
+        # message.* — response_item/message is a chat message; treat a
+        # function_call_output as a tool-role message per the spec's
+        # "tool_call_id conditional on role===tool" rule.
+        - name: "'message.role'"
+          value: >-
+            type!=='response_item' ? undefined
+              : payload.type==='message' ? payload.role
+              : payload.type==='function_call_output' ? 'tool'
+              : undefined
+        - name: "'message.content'"
+          value: >-
+            type!=='response_item' ? undefined
+              : payload.type==='message' ? JSON.stringify(payload.content)
+              : payload.type==='function_call_output' ? payload.output
+              : undefined
+        - name: "'message.tool_call_id'"
+          value: >-
+            (type==='response_item' && payload.type==='function_call_output')
+              ? payload.call_id
+              : undefined
+        # llm.prompt / llm.completion — the full request/response content,
+        # JSON-encoded per the spec since Codex message content is
+        # structured (an array of content-block objects), not plain text.
+        - name: "'llm.prompt'"
+          value: >-
+            (type==='response_item' && payload.type==='message' && payload.role==='user')
+              ? JSON.stringify(payload.content)
+              : undefined
+        - name: "'llm.completion'"
+          value: >-
+            (type==='response_item' && payload.type==='message' && payload.role==='assistant')
+              ? JSON.stringify(payload.content)
+              : undefined
+        # tool.* — response_item/function_call is an OpenAI function-style
+        # tool call; arguments already arrive as a JSON-encoded string.
+        - name: "'tool.type'"
+          value: >-
+            (type==='response_item' && payload.type==='function_call')
+              ? 'function'
+              : undefined
+        - name: "'tool.function.name'"
+          value: >-
+            (type==='response_item' && payload.type==='function_call')
+              ? payload.name
+              : undefined
+        - name: "'tool.function.parameters'"
+          value: >-
+            (type==='response_item' && payload.type==='function_call')
+              ? payload.arguments
+              : undefined

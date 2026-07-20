@@ -1,0 +1,29 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000020,
+    "timestamp": "2026-07-01T12:00:20.000Z",
+    "type": "event_msg",
+    "payload": {
+      "type": "token_count",
+      "info": {
+        "total_token_usage": {
+          "input_tokens": 26549,
+          "cached_input_tokens": 22272,
+          "output_tokens": 1590,
+          "reasoning_output_tokens": 1152,
+          "total_tokens": 28139
+        },
+        "last_token_usage": {
+          "input_tokens": 6245,
+          "cached_input_tokens": 5376,
+          "output_tokens": 407,
+          "reasoning_output_tokens": 320,
+          "total_tokens": 6652
+        },
+        "model_context_window": 272000
+      },
+      "rate_limits": { "primary": null, "secondary": null }
+    }
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "turn_context",
+    "llm.model": "gpt-5.1-codex"
+  }
+]

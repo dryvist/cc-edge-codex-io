@@ -1,0 +1,9 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "session_meta",
+    "llm.agent.name": "00000000-0000-0000-0000-000000000000"
+  }
+]

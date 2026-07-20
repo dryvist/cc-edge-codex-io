@@ -4,7 +4,10 @@ groups: {}
 asyncFuncTimeout: 1000
 description: >-
   Codex CLI prompt history pipeline. Stamps Splunk-canonical fields
-  (sourcetype, index) on every history.jsonl event; datatype already
+  (sourcetype, index) on every history.jsonl event, then normalizes onto
+  the OpenTelemetry-AI `llm.*` semantic-convention fields the source data
+  actually supports (session id, raw prompt text). Raw/source fields are
+  always preserved alongside the added `llm.*` fields; datatype already
   arrives from the input's metadata.
 functions:
   - id: eval
@@ -16,3 +19,15 @@ functions:
           value: "'codex:cli:history'"
         - name: index
           value: "'main'"
+  - id: eval
+    filter: "true"
+    disabled: false
+    conf:
+      add:
+        # llm.agent.name — every entry carries the originating session id.
+        - name: "'llm.agent.name'"
+          value: "session_id"
+        # llm.prompt — `text` is the exact raw prompt as submitted; no
+        # structured-message encoding applies here, so it's used as-is.
+        - name: "'llm.prompt'"
+          value: "text"

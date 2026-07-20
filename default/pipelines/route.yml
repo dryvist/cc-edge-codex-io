@@ -1,0 +1,26 @@
+id: default
+groups: {}
+comments: []
+routes:
+  - id: codex-sessions
+    name: Codex CLI Sessions (File Monitor)
+    final: true
+    disabled: false
+    pipeline: codex_sessions
+    description: "Codex CLI rollout JSONL session transcripts: turn context, response items, tool calls, and reasoning"
+    enableOutputExpression: false
+    targetContext: group
+    filter: __inputId=='file:cc-edge-codex-io.codex-cli-sessions'
+    clones: []
+    output: __group
+  - id: codex-history
+    name: Codex CLI History (File Monitor)
+    final: true
+    disabled: false
+    pipeline: codex_history
+    description: "Codex CLI prompt history (history.jsonl): per-session raw prompt text"
+    enableOutputExpression: false
+    targetContext: group
+    filter: __inputId=='file:cc-edge-codex-io.codex-cli-history'
+    clones: []
+    output: __group

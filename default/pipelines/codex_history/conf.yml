@@ -1,0 +1,18 @@
+output: default
+streamtags: []
+groups: {}
+asyncFuncTimeout: 1000
+description: >-
+  Codex CLI prompt history pipeline. Stamps Splunk-canonical fields
+  (sourcetype, index) on every history.jsonl event; datatype already
+  arrives from the input's metadata.
+functions:
+  - id: eval
+    filter: "true"
+    disabled: false
+    conf:
+      add:
+        - name: sourcetype
+          value: "'codex:cli:history'"
+        - name: index
+          value: "'main'"

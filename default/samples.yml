@@ -1,0 +1,19 @@
+codex_session:
+  sampleName: sanitized_codex_session.json
+  created: 1780000000000
+  size: 900
+  numEvents: 3
+  description: A Codex CLI rollout JSONL session excerpt. Each line is a
+    top-level event (session_meta, event_msg, turn_context, response_item,
+    or compacted); response_item payloads include message, reasoning,
+    function_call, function_call_output, custom_tool_call, and
+    custom_tool_call_output types. Sessions are stored one file per run
+    under sessions/YYYY/MM/DD/rollout-<timestamp>-<uuid>.jsonl.
+codex_history:
+  sampleName: sanitized_codex_history.json
+  created: 1780000100000
+  size: 300
+  numEvents: 2
+  description: Codex CLI prompt history. A single append-only history.jsonl
+    file with one entry per submitted prompt, containing the originating
+    session_id, a unix timestamp, and the raw prompt text.

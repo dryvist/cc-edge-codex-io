@@ -1,0 +1,8 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "response_item"
+  }
+]

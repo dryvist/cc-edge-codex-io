@@ -1,0 +1,20 @@
+{
+  "name": "cc-edge-codex-io",
+  "version": "0.1.0",
+  "minLogStreamVersion": "4.16.0",
+  "author": "VisiCore Tech - CriblPacks@VisiCoreTech.com",
+  "description": "Cribl Edge Pack that collects OpenAI Codex CLI session transcripts (rollout JSONL: turn context, response items, tool calls, reasoning) and prompt history from the local filesystem, then forwards them to a Cribl Stream worker group for indexing, analysis, and search.",
+  "displayName": "Codex CLI Pack For Edge",
+  "tags": {
+    "streamtags": [
+      "vct",
+      "ai",
+      "codex",
+      "openai"
+    ],
+    "dataType": [
+      "logs"
+    ]
+  },
+  "exports": []
+}

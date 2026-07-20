@@ -1,0 +1,15 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000010,
+    "timestamp": "2026-07-01T12:00:10.000Z",
+    "type": "response_item",
+    "payload": {
+      "type": "message",
+      "role": "user",
+      "content": [
+        { "type": "input_text", "text": "List the files in this directory." }
+      ]
+    }
+  }
+]

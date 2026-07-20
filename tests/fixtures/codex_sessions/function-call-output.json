@@ -1,0 +1,13 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000005,
+    "timestamp": "2026-07-01T12:00:05.500Z",
+    "type": "response_item",
+    "payload": {
+      "type": "function_call_output",
+      "call_id": "call_0000000000000000000000000",
+      "output": "total 8\ndrwxr-xr-x  3 user  staff   96 Jul  1 12:00 .\n-rw-r--r--  1 user  staff  120 Jul  1 12:00 README.md\n"
+    }
+  }
+]

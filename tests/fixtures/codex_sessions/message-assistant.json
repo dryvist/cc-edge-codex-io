@@ -1,0 +1,15 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000015,
+    "timestamp": "2026-07-01T12:00:15.000Z",
+    "type": "response_item",
+    "payload": {
+      "type": "message",
+      "role": "assistant",
+      "content": [
+        { "type": "output_text", "text": "There is one file: README.md." }
+      ]
+    }
+  }
+]

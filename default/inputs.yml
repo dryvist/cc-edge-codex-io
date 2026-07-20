@@ -1,0 +1,54 @@
+inputs:
+  codex-cli-sessions:
+    disabled: false
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    mode: manual
+    interval: 30
+    filenames:
+      - "rollout-*.jsonl"
+    filterArchivedFiles: false
+    tailOnly: false
+    idleTimeout: 300
+    checkFileModTime: true
+    forceText: false
+    hashLen: 256
+    staleChannelFlushMs: 10000
+    suppressMissingPathErrors: false
+    deleteFiles: false
+    saltHash: false
+    includeUnidentifiableBinary: false
+    recurse: true
+    type: file
+    path: "$CODEX_HOME/sessions"
+    metadata:
+      - name: datatype
+        value: "'codex-cli-session'"
+
+  codex-cli-history:
+    disabled: false
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    mode: manual
+    interval: 30
+    filenames:
+      - "history.jsonl"
+    filterArchivedFiles: false
+    tailOnly: false
+    idleTimeout: 300
+    checkFileModTime: true
+    forceText: false
+    hashLen: 256
+    staleChannelFlushMs: 10000
+    suppressMissingPathErrors: false
+    deleteFiles: false
+    saltHash: false
+    includeUnidentifiableBinary: false
+    recurse: false
+    type: file
+    path: "$CODEX_HOME"
+    metadata:
+      - name: datatype
+        value: "'codex-cli-history'"

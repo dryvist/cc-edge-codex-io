@@ -1,0 +1,11 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "event_msg",
+    "llm.openai.usage.prompt_tokens": 6245,
+    "llm.openai.usage.completion_tokens": 407,
+    "llm.openai.usage.total_tokens": 6652
+  }
+]

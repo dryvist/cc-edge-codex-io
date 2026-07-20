@@ -1,0 +1,11 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "response_item",
+    "message.role": "assistant",
+    "message.content": "[{\"type\":\"output_text\",\"text\":\"There is one file: README.md.\"}]",
+    "llm.completion": "[{\"type\":\"output_text\",\"text\":\"There is one file: README.md.\"}]"
+  }
+]

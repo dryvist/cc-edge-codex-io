@@ -1,0 +1,11 @@
+[
+  {
+    "sourcetype": "codex:cli:session",
+    "index": "main",
+    "datatype": "codex-cli-session",
+    "type": "response_item",
+    "message.role": "user",
+    "message.content": "[{\"type\":\"input_text\",\"text\":\"List the files in this directory.\"}]",
+    "llm.prompt": "[{\"type\":\"input_text\",\"text\":\"List the files in this directory.\"}]"
+  }
+]

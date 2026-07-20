@@ -1,0 +1,16 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000001,
+    "timestamp": "2026-07-01T12:00:01.000Z",
+    "type": "turn_context",
+    "payload": {
+      "cwd": "/home/user/project",
+      "approval_policy": "on-request",
+      "sandbox_policy": "workspace-write",
+      "model": "gpt-5.1-codex",
+      "effort": "medium",
+      "summary": "auto"
+    }
+  }
+]

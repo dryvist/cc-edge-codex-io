@@ -1,0 +1,17 @@
+[
+  {
+    "datatype": "codex-cli-session",
+    "_time": 1780000000,
+    "timestamp": "2026-07-01T12:00:00.000Z",
+    "type": "session_meta",
+    "payload": {
+      "id": "00000000-0000-0000-0000-000000000000",
+      "timestamp": "2026-07-01T12:00:00.000Z",
+      "cwd": "/home/user/project",
+      "originator": "codex-tui",
+      "cli_version": "0.121.0",
+      "source": "cli",
+      "model_provider": "openai"
+    }
+  }
+]

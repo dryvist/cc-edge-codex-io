@@ -1,0 +1,12 @@
+[
+  {
+    "session_id": "00000000-0000-0000-0000-000000000000",
+    "ts": 1780000000,
+    "text": "Please read the README.md file and summarize it."
+  },
+  {
+    "session_id": "00000000-0000-0000-0000-000000000000",
+    "ts": 1780000300,
+    "text": "Now add a Usage section with a minimal example."
+  }
+]

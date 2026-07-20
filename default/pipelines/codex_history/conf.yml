@@ -24,9 +24,10 @@ functions:
     disabled: false
     conf:
       add:
-        # llm.agent.name — every entry carries the originating session id.
+        # llm.agent.name — the *agent's* name, constant. session_id stays
+        # a raw-preserved field for grouping; it is not an agent name.
         - name: "'llm.agent.name'"
-          value: "session_id"
+          value: "'codex'"
         # llm.prompt — `text` is the exact raw prompt as submitted; no
         # structured-message encoding applies here, so it's used as-is.
         - name: "'llm.prompt'"

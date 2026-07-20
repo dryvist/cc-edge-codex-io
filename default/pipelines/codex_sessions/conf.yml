@@ -29,13 +29,14 @@ functions:
         - name: "'llm.model'"
           value: >-
             type==='turn_context' ? payload.model : undefined
-        # llm.agent.name — session_meta carries the session id; Codex CLI
-        # sessions are agent-driven (the model chooses its own actions),
-        # not a fixed program-controlled chain, so llm.agent.* fits better
-        # than llm.chain.*.
+        # llm.agent.name — the *agent's* name, not a session identifier.
+        # Codex CLI sessions are agent-driven (the model chooses its own
+        # actions), not a fixed program-controlled chain, so llm.agent.*
+        # fits better than llm.chain.*. The session id (payload.id) stays
+        # a raw-preserved field for grouping; it does not belong in a
+        # llm.agent.name slot.
         - name: "'llm.agent.name'"
-          value: >-
-            type==='session_meta' ? payload.id : undefined
+          value: "'codex'"
         # llm.openai.usage.* — event_msg/token_count carries cumulative and
         # incremental token counts; last_token_usage is the per-update
         # delta, the closest analog to a single request/response's usage.

@@ -4,7 +4,7 @@
     "index": "main",
     "datatype": "codex-cli-history",
     "session_id": "00000000-0000-0000-0000-000000000000",
-    "llm.agent.name": "00000000-0000-0000-0000-000000000000",
+    "llm.agent.name": "codex",
     "llm.prompt": "Please read the README.md file and summarize it."
   }
 ]

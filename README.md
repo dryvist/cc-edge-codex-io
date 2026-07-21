@@ -82,10 +82,10 @@ Use this data for:
 
 ## Pipelines
 
-- `codex_sessions` — stamps `sourcetype: codex:cli:session`, `index: main`,
+- `codex_sessions` — stamps `sourcetype: codex:cli:session`, `index: codex`,
   and OpenTelemetry-AI `llm.*` semantic-convention fields on every session
   transcript event (`datatype` already arrives via input metadata)
-- `codex_history` — stamps `sourcetype: codex:cli:history`, `index: main`,
+- `codex_history` — stamps `sourcetype: codex:cli:history`, `index: codex`,
   and `llm.agent.name` on every history event
 
 Neither pipeline is named `main`; both feed a `__group` output per this

@@ -19,7 +19,7 @@ functions:
         - name: sourcetype
           value: "'codex:cli:session'"
         - name: index
-          value: "'main'"
+          value: "'codex'"
   - id: eval
     filter: "true"
     disabled: false

@@ -18,7 +18,7 @@ functions:
         - name: sourcetype
           value: "'codex:cli:history'"
         - name: index
-          value: "'main'"
+          value: "'codex'"
   - id: eval
     filter: "true"
     disabled: false

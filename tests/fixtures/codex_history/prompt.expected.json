@@ -1,7 +1,7 @@
 [
   {
     "sourcetype": "codex:cli:history",
-    "index": "main",
+    "index": "codex",
     "datatype": "codex-cli-history",
     "session_id": "00000000-0000-0000-0000-000000000000",
     "llm.agent.name": "codex",

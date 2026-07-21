@@ -1,7 +1,7 @@
 [
   {
     "sourcetype": "codex:cli:session",
-    "index": "main",
+    "index": "codex",
     "datatype": "codex-cli-session",
     "type": "response_item",
     "message.role": "assistant",

@@ -1,0 +1,21 @@
+name: Update flake.lock
+
+on:
+  schedule:
+    # Weekly: relock the whole flake (third-party inputs included).
+    - cron: "35 18 * * 4"
+    # Hourly: a seconds-long check that relocks only our inputs behind their branch head.
+    - cron: "33 * * * *"
+  repository_dispatch:
+    types: [update-flake-input]
+  workflow_dispatch: {}
+
+permissions: {}
+
+jobs:
+  relock:
+    uses: dryvist/.github/.github/workflows/_update-flake-lock.yml@main
+    with:
+      targeted: ${{ github.event_name == 'repository_dispatch' || github.event.schedule == '33 * * * *' }}
+    secrets:
+      GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}

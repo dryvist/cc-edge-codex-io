@@ -4,6 +4,7 @@
     "index": "codex",
     "datatype": "codex-cli-session",
     "type": "session_meta",
-    "llm.agent.name": "codex"
+    "llm.agent.name": "codex",
+    "_time": 1782907200
   }
 ]

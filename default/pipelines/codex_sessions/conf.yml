@@ -25,6 +25,19 @@ functions:
     disabled: false
     conf:
       add:
+        # _time — every rollout record carries its own top-level ISO-8601
+        # `timestamp`. Stamping _time from it gives downstream Splunk an
+        # explicit time, so it never scans the payload for an epoch (the
+        # rate_limits.resets_at field is always in the future). An absent or
+        # unparseable timestamp keeps the existing _time.
+        - name: _time
+          value: >-
+            (Date.parse(timestamp) / 1000) || _time
+  - id: eval
+    filter: "true"
+    disabled: false
+    conf:
+      add:
         # llm.model — turn_context carries the active model for the turn.
         - name: "'llm.model'"
           value: >-

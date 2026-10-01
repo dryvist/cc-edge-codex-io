@@ -4,6 +4,7 @@
     "index": "codex",
     "datatype": "codex-cli-session",
     "type": "turn_context",
-    "llm.model": "gpt-5.1-codex"
+    "llm.model": "gpt-5.1-codex",
+    "_time": 1782907201
   }
 ]

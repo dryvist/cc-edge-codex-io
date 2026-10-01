@@ -1,0 +1,22 @@
+Codex Session JSONL:
+  lib: custom
+  description: >-
+    Codex CLI rollout transcripts — one JSON record per line. The stock breaker
+    caps an event at 51200 bytes and splits a larger record mid-token, leaving
+    fragments with no leading timestamp. maxEventBytes is 16777216 (16MiB) so a
+    record stays whole. Cribl does not extract a timestamp here; the
+    codex_sessions pipeline sets _time from each record's own `timestamp` field.
+  rules:
+    - condition: "true"
+      type: regex
+      timestampAnchorRegex: /^/
+      timestamp:
+        type: none
+      timestampTimezone: local
+      timestampEarliest: -420weeks
+      timestampLatest: +1week
+      maxEventBytes: 16777216
+      disabled: false
+      eventBreakerRegex: /[\n\r]+(?!\s)/
+      name: jsonl
+  tags: codex,jsonl

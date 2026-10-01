@@ -6,6 +6,7 @@
     "type": "response_item",
     "tool.type": "function",
     "tool.function.name": "exec_command",
-    "tool.function.parameters": "{\"cmd\":\"ls -la\",\"workdir\":\"/home/user/project\"}"
+    "tool.function.parameters": "{\"cmd\":\"ls -la\",\"workdir\":\"/home/user/project\"}",
+    "_time": 1782907205
   }
 ]

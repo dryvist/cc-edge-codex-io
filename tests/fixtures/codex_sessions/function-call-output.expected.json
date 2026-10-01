@@ -6,6 +6,7 @@
     "type": "response_item",
     "message.role": "tool",
     "message.tool_call_id": "call_0000000000000000000000000",
-    "message.content": "total 8\ndrwxr-xr-x  3 user  staff   96 Jul  1 12:00 .\n-rw-r--r--  1 user  staff  120 Jul  1 12:00 README.md\n"
+    "message.content": "total 8\ndrwxr-xr-x  3 user  staff   96 Jul  1 12:00 .\n-rw-r--r--  1 user  staff  120 Jul  1 12:00 README.md\n",
+    "_time": 1782907205.5
   }
 ]

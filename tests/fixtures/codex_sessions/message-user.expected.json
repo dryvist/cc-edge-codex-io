@@ -6,6 +6,7 @@
     "type": "response_item",
     "message.role": "user",
     "message.content": "[{\"type\":\"input_text\",\"text\":\"List the files in this directory.\"}]",
-    "llm.prompt": "[{\"type\":\"input_text\",\"text\":\"List the files in this directory.\"}]"
+    "llm.prompt": "[{\"type\":\"input_text\",\"text\":\"List the files in this directory.\"}]",
+    "_time": 1782907210
   }
 ]

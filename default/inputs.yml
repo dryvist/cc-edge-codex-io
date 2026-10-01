@@ -22,6 +22,8 @@ inputs:
     recurse: true
     type: file
     path: "$CODEX_HOME/sessions"
+    breakerRulesets:
+      - "Codex Session JSONL"
     metadata:
       - name: datatype
         value: "'codex-cli-session'"

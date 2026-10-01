@@ -6,6 +6,7 @@
     "type": "response_item",
     "message.role": "assistant",
     "message.content": "[{\"type\":\"output_text\",\"text\":\"There is one file: README.md.\"}]",
-    "llm.completion": "[{\"type\":\"output_text\",\"text\":\"There is one file: README.md.\"}]"
+    "llm.completion": "[{\"type\":\"output_text\",\"text\":\"There is one file: README.md.\"}]",
+    "_time": 1782907215
   }
 ]

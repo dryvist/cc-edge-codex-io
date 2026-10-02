@@ -1,18 +1,36 @@
 {
   "nodes": {
+    "channels": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable"
+      },
+      "locked": {
+        "path": "../../channels",
+        "type": "path"
+      },
+      "original": {
+        "path": "../../channels",
+        "type": "path"
+      },
+      "parent": [
+        "nix-devenv"
+      ]
+    },
     "nix-devenv": {
       "inputs": {
+        "channels": "channels",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
         "dir": "shells/typescript",
-        "lastModified": 1779661353,
-        "narHash": "sha256-w+690PS7JkPUvCCdW45H/bBhPWaTiSUUJVUvBFLhiq8=",
+        "lastModified": 1790907771,
+        "narHash": "sha256-nlpvsAARhxHjFJN3+sdMvL8T/QabyGE0M8XoMUH0oBs=",
         "owner": "JacobPEvans",
         "repo": "nix-devenv",
-        "rev": "c39a025e3924c47f701ad673456912020807f8b4",
+        "rev": "cca50615f7a3883b1f62f89325e6e7f5549a85fe",
         "type": "github"
       },
       "original": {
@@ -23,6 +41,38 @@
       }
     },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1790291545,
+        "narHash": "sha256-WQhNWIW3PPijuZexyl5Zf0tJuQ7sKt5C9WPXVO4pMuM=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "7486293a941f7b0ec123f0c431517027f705f60f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-26.05-darwin",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1790238896,
+        "narHash": "sha256-ym4BG18Pu2awiJIehla1Lo9xiB2QYRcCzW3SB74gEBY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "34ca302a9572963c02e385c056be37c85ff51b77",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1779495359,
         "narHash": "sha256-KZ/9A3gvlKboDm2Kbv4A6KnfA9wMSfebyoEU91HeBn8=",
@@ -41,7 +91,7 @@
     "root": {
       "inputs": {
         "nix-devenv": "nix-devenv",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

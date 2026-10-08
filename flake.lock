@@ -26,11 +26,11 @@
       },
       "locked": {
         "dir": "shells/typescript",
-        "lastModified": 1791480278,
-        "narHash": "sha256-d8TUzmABfyxj4HFdxeWBPhi23JuSRpw/G6SiGPiQQ8E=",
+        "lastModified": 1791498500,
+        "narHash": "sha256-+YmiDsVdie4Q4/tvzQtbMOy9olXCj5ikhFSAaeFTTXY=",
         "owner": "JacobPEvans",
         "repo": "nix-devenv",
-        "rev": "565d51eee0d6fb3c51ff2b1232db749090942124",
+        "rev": "dd26bae3ac2a76faa00cb5bb2ce7bdcdfc34bcc3",
         "type": "github"
       },
       "original": {
@@ -74,11 +74,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1779495359,
-        "narHash": "sha256-KZ/9A3gvlKboDm2Kbv4A6KnfA9wMSfebyoEU91HeBn8=",
+        "lastModified": 1782904953,
+        "narHash": "sha256-ESJ4VgytmAt+98YLM8466luln4HyEZ9Q36b9+Bb4P5w=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "2b76bb8a3c79707f0d0903e486da6d9851654c3c",
+        "rev": "0921fdb3e13e40fe25fbc52b89661a9d6d32ac68",
         "type": "github"
       },
       "original": {

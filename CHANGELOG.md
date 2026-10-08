@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.3](https://github.com/dryvist/cc-edge-codex-io/compare/v0.1.2...v0.1.3) (2026-10-08)
+
+
+### Bug Fixes
+
+* **codex_sessions:** set _time from the record timestamp and keep records whole ([bd0ee26](https://github.com/dryvist/cc-edge-codex-io/commit/bd0ee261e0908fade17cac6237a2562bf14dbce4))
+* **codex:** take session event time from the record timestamp ([9f49bed](https://github.com/dryvist/cc-edge-codex-io/commit/9f49bedaadc90ef6e8b5bd1b2c88660c2908b154))
+* **release:** attach the pack to a draft release before publishing ([b233f9a](https://github.com/dryvist/cc-edge-codex-io/commit/b233f9ae8dd5157b519b464aa2d61aa50bbbf9a6))
+
 ## [0.1.2](https://github.com/dryvist/cc-edge-codex-io/compare/v0.1.1...v0.1.2) (2026-07-21)
 
 

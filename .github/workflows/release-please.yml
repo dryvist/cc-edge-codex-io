@@ -21,7 +21,7 @@ jobs:
       GH_ACTION_RELEASE_PLEASE_PRIVATE_KEY: ${{ secrets.GH_ACTION_RELEASE_PLEASE_PRIVATE_KEY }}
 
   # release-please creates the release as a draft (release-please-config.json).
-  # Build and attach the pack first, then publish: a published release is immutable.
+  # The pack is attached to the draft, then the draft is published.
   assets:
     needs: release-please
     if: ${{ needs.release-please.outputs.release_created == 'true' }}

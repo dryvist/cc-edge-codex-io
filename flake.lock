@@ -26,16 +26,17 @@
       },
       "locked": {
         "dir": "shells/typescript",
-        "lastModified": 1791622483,
-        "narHash": "sha256-i37KabjhFUUc4vA72O6a6RxSmBDcAwUFTT8xThozQGI=",
-        "owner": "JacobPEvans",
+        "lastModified": 1791556907,
+        "narHash": "sha256-1DXej4u1e1QSYwrZjHnd0nQB0napiUn97g+4ziuoUsU=",
+        "owner": "dryvist",
         "repo": "nix-devenv",
-        "rev": "c1f5139c3a5d6d41635ad7d48719d3ff03bf281e",
+        "rev": "b964183d17c541cde8687dbba924f8a8ebe11d4d",
         "type": "github"
       },
       "original": {
         "dir": "shells/typescript",
-        "owner": "JacobPEvans",
+        "owner": "dryvist",
+        "ref": "v0",
         "repo": "nix-devenv",
         "type": "github"
       }

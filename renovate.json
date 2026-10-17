@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>dryvist/.github"
+    "github>JacobPEvans/.github"
   ],
   "customManagers": [
     {
@@ -28,16 +28,6 @@
         "major"
       ],
       "enabled": false
-    },
-    {
-      "description": "Cribl is in the criblio/** trusted-org list per JacobPEvans renovate-presets, so patch bumps auto-merge after the inherited stabilization window.",
-      "matchPackageNames": [
-        "cribl/cribl"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true
     }
   ]
 }

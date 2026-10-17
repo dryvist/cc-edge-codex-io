@@ -1,6 +1,6 @@
 {
   // dryvist canonical Biome config (mirror of JacobPEvans/.github/biome.jsonc).
-  "$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/dryvist/cc-edge-codex-io/compare/v0.1.3...v0.1.4) (2026-10-24)
+
+
+### Bug Fixes
+
+* enforce seven-day package age for pnpm resolution ([#78](https://github.com/dryvist/cc-edge-codex-io/issues/78)) ([8fe13cd](https://github.com/dryvist/cc-edge-codex-io/commit/8fe13cdc05256580b482a744b007bca1f6b9deeb))
+
 ## [0.1.3](https://github.com/dryvist/cc-edge-codex-io/compare/v0.1.2...v0.1.3) (2026-10-08)
 
 

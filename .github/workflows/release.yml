@@ -25,7 +25,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created == 'true' }}
     permissions:
       contents: write
-    uses: jpe-cribl/.github/.github/workflows/cribl-pack-release.yml@e74b14b20c29e990826227c84ebd9b503da3abb1 # main
+    uses: jpe-cribl/.github/.github/workflows/cribl-pack-release.yml@b5a2249872c761f9462b60abf67b11d89473bf8d # main
     with:
       tag: ${{ needs.release.outputs.tag_name }}
 
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Generate GitHub App token
         id: app-token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3
         with:
           client-id: ${{ vars.GH_ACTION_RELEASE_PLEASE_APP_ID }}
           private-key: ${{ secrets.GH_ACTION_RELEASE_PLEASE_PRIVATE_KEY }}
